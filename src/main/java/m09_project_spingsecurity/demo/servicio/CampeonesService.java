@@ -38,11 +38,9 @@ public class CampeonesService {
         repositoriCampeones.save(c);
     }
 
-
     public void deleteByName (String c){
         repositoriCampeones.deleteById(c);
     }
-
 
     public void updateCampeon(Campeon c){
         repositoriCampeones.save(c);
