@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    </style>
+</head>
+<body>
+<thead>
+<tr>
+
+<p>
+    <font size="6" face="perpetua" color="#00008b">
+
+        <th>Name</th>
+        <th>|</th>
+        <th>Role</th>
+        <th>|</th>
+        <th>Attack Type</th>
+        <th>|</th>
+        <th>Resource</th>
+        <th>|</th>
+        <th>Attack Range</th>
+
+    </font>
+</p>
+
+    <form action="#"  th:action="@{afegir}"  method="post">
+        <input  type="submit" style="font-face: 'Comic Sans MS'; font-size: medium; color: darkslateblue; background-color: #DCF62A; border: 3pt ridge lightgrey"   value="Add champion"/>
+    </form>
+</tr></br>
+</thead>
+<tbody>
+<tr th:each="Campeon : ${llistaCampeon}">
+    <p>
+        <font size="4" face="perpetua" color="#00008b">
+            <td th:text="${Campeon.name}">name</td>
+            <th>|</th>
+            <td th:text="${Campeon.role}">role</td>
+            <th>|</th>
+            <td th:text="${Campeon.attack}">attack</td>
+            <th>|</th>
+            <td th:text="${Campeon.resource}">resource</td>
+            <th>|</th>
+            <td th:text="${Campeon.attackRange}">attackRange</td>
+        </font>
+    </p>
+
+    <form action="#"  th:action="@{update/{name}(name = ${Campeon.name})}" th:object="${Campeon}"  method="post">
+        <input type="submit" style="font-face: 'Comic Sans MS'; font-size: medium; color: darkslateblue; background-color: #DCF62A; border: 3pt ridge lightgrey" value="Update"/>
+    </form>
+    <p></p>
+    <form action="#"  th:action="@{delete/{name}(name = ${Campeon.name})}" th:object="${Campeon}"  method="post">
+        <input  type="submit" style="font-face: 'Comic Sans MS'; font-size: medium; color: darkslateblue; background-color: #DCF62A; border: 3pt ridge lightgrey"   value="Remove"/>
+    </form>
+    </br>
+</tr>
+</tbody>
+</table>
+<br>
+<br>
+<form th:action="@{/login}" method="post">
+    <input type="submit" style="font-face: 'Comic Sans MS'; font-size: larger; color: teal; background-color: #FFFFC0; border: 3pt ridge lightgrey" value="Login"/>
+</form>
+<form th:action="@{/registration}" method="get">
+    <input type="submit" style="font-face: 'Comic Sans MS'; font-size: larger; color: teal; background-color: #FFFFC0; border: 3pt ridge lightgrey" value="Register"/>
+</form>
+<form th:action="@{/logout}" method="post">
+    <input type="submit" style="font-face: 'Comic Sans MS'; font-size: larger; color: teal; background-color: #FFFFC0; border: 3pt ridge lightgrey" value="Sortir (Sign Out)"/>
+</form>
+</body>
+</html>
