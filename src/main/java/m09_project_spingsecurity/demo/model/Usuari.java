@@ -34,6 +34,6 @@ public class Usuari {
         this.username = name;
         this.password = password;
         this.matchingPassword = matchingPassword;
-        this.rol = "USER";
+        this.rol = "ADMIN";
     }
 }
