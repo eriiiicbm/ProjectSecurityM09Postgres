@@ -23,7 +23,7 @@ public class ControladorLogin {
     @PostMapping("/registration")
     //https://www.thymeleaf.org/doc/tutorials/2.1/thymeleafspring.html#handling-the-command-object
     public String afegirSubmit(@ModelAttribute("usuari") Usuari e){
-        e.setRol("USER");
+        e.setRol("ADMIN");
         servei.add(e);
         return "redirect:/";
     }
