@@ -45,7 +45,6 @@ public class ControladorCampeones {
     }
 
     @PostMapping("/updateCampeon")
-    //empleatForm és el nom de l'objecte que es recull al formulari, el CommandObject (bean)
     //https://www.thymeleaf.org/doc/tutorials/2.1/thymeleafspring.html#handling-the-command-object
     public String updateCampeonpost(@ModelAttribute("Campeon") Campeon e){
         serveiCampeon.updateCampeon(e);

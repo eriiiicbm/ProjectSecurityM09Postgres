@@ -35,7 +35,7 @@ public class WebConf extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
-                .authorizeRequests()
+/*                .authorizeRequests()
                 .antMatchers("/","/home", "/registration","/error", "/afegir/**", "/afegirCampeon").permitAll()
                 .antMatchers("/update/**","/delete/**").hasRole("ADMIN")
                 .anyRequest().authenticated()
@@ -45,9 +45,22 @@ public class WebConf extends WebSecurityConfigurerAdapter {
                 .and()
                 .logout()
                 .logoutSuccessUrl("/")
+                .permitAll();*/
+
+                .authorizeRequests()
+                .antMatchers("/","/home", "/registration","/error", "/h2-console/**").permitAll()
+                .antMatchers("userList","/update/**","/delete/**").hasRole("ADMIN")
+                .anyRequest().authenticated()
+                .and()
+                .formLogin()
+                .permitAll()
+                .and()
+                .logout()
+                .logoutSuccessUrl("/")
                 .permitAll();
 
-
+                http.csrf().disable();
+                http.headers().frameOptions().disable();
     }
 
 }
