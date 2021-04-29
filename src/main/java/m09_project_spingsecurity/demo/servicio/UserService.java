@@ -30,7 +30,6 @@ public class UserService {
 
     @PostConstruct
     public void init() {
-        repositoriUsuaris.save(new Usuari("admin", passwordEncoder("admin"), "admin", "ADMIN"));
         repositoriUsuaris.save(new Usuari("eric", passwordEncoder("eric"), "eric", "ADMIN"));
         repositoriUsuaris.save(new Usuari("montse", passwordEncoder("montse"), "montse", "USER"));
 

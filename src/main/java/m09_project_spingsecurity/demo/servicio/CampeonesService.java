@@ -34,20 +34,19 @@ public class CampeonesService {
         return repositoriCampeones.findById(c).orElse(null);
     }
 
-    public void deleteByName (String c){
-        repositoriCampeones.deleteById(c);
-    }
-
-
     public void afegirCampeon (Campeon c){
         repositoriCampeones.save(c);
     }
 
 
+    public void deleteByName (String c){
+        repositoriCampeones.deleteById(c);
+    }
 
 
     public void updateCampeon(Campeon c){
         repositoriCampeones.save(c);
+
     }
 
     public void sortByAttRange(){

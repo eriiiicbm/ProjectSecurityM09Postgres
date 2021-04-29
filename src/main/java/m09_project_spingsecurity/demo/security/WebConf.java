@@ -47,8 +47,7 @@ public class WebConf extends WebSecurityConfigurerAdapter {
                 .logoutSuccessUrl("/")
                 .permitAll();
 
-        http.csrf().disable(); //per h2-console
-        http.headers().frameOptions().disable(); //per h2-console
+
     }
 
 }
