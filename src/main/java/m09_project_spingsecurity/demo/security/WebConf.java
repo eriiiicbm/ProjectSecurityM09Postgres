@@ -37,8 +37,8 @@ public class WebConf extends WebSecurityConfigurerAdapter {
         http
 
                 .authorizeRequests()
-                .antMatchers("/","/home", "/registration","/error", "/h2-console/**").permitAll()
-                .antMatchers("/update/**","/delete/**").hasRole("ADMIN")
+                .antMatchers("/","/home", "/registration","/error", "/h2-console/**", "/update/**", "/delete/**").permitAll()
+     //           .antMatchers("/update/**","/delete/**").hasRole("ADMIN")
                 .anyRequest().authenticated()
                 .and()
                 .formLogin()
