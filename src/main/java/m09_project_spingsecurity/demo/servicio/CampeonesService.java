@@ -47,11 +47,11 @@ public class CampeonesService {
 
     }
 
-/*    public void sortByAttRange(){
+    public void sortByAttRange(){
         List<Campeon> listaCampeones = new ArrayList<>();
         repositoriCampeones.findAll().forEach(campeon -> listaCampeones.add(campeon));
         listaCampeones.sort(Comparator.comparingLong(Campeon::getAttackRange));
-    }*/
+    }
 
 }
 
