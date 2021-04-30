@@ -26,7 +26,7 @@ public class CampeonesService {
     @PostConstruct
     public void init(){
         repositoriCampeones.save(new Campeon("Ahri", "Maga", "A distancia", "Mana", 125));
-        repositoriCampeones.save(new Campeon("Sett", "Juggernaut", "Melee", "No", 75));
+        repositoriCampeones.save(new Campeon("Sett", "Juggernaut", "Melee", "Courage", 75));
 
     }
 
@@ -47,11 +47,11 @@ public class CampeonesService {
 
     }
 
-    public void sortByAttRange(){
+/*    public void sortByAttRange(){
         List<Campeon> listaCampeones = new ArrayList<>();
         repositoriCampeones.findAll().forEach(campeon -> listaCampeones.add(campeon));
         listaCampeones.sort(Comparator.comparingLong(Campeon::getAttackRange));
-    }
+    }*/
 
 }
 

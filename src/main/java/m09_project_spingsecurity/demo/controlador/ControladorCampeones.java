@@ -15,7 +15,7 @@ public class ControladorCampeones {
 
     @GetMapping("/")
     public  String  inici(Model m){
-        serveiCampeon.sortByAttRange();
+//        serveiCampeon.sortByAttRange();
         m.addAttribute("llistaCampeon",serveiCampeon.listado());
         m.addAttribute("Campeon",new Campeon());
         return "home";
@@ -23,7 +23,7 @@ public class ControladorCampeones {
 
     @GetMapping("/home")
     public String llistarCampeon(Model m){
-        serveiCampeon.sortByAttRange();
+//        serveiCampeon.sortByAttRange();
         m.addAttribute("llistaCampeon",serveiCampeon.listado());
         m.addAttribute("Campeon",new Campeon());
         return "home";
