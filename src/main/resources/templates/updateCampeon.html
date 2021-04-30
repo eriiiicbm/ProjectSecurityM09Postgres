@@ -2,40 +2,40 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <body>
 <font size="6" face="perpetua" color="#00008b">
-<h1 th:text="Update">form</h1>
+    <h1 th:text="Update">form</h1>
 </font>
 <form action="#"  th:action="@{/updateCampeon}"  th:object="${Campeon}" method="POST" >
     <font size="6" face="perpetua" color="#00008b">
-    <div>
-        <label th:text="Name">Nom Campeon</label>
-        <input type="text" id="username" th:field="*{name}"/>
-        <p th:each="error: ${#fields.errors('name')}"
-           th:text="${error}">Validation error</p>
-    </div>
-    <div>
-        <label th:text="Role">Rol Campeon</label>
-        <input type="text"  th:field="*{role}"/>
-        <p th:each="error : ${#fields.errors('role')}"
-           th:text="${error}">Validation error</p>
-    </div>
-    <div>
-        <label th:text="AttackType">Ataque Campeon</label>
-        <input type="text"  th:field="*{attack}"/>
-        <p th:each="error : ${#fields.errors('attack')}"
-           th:text="${error}">Validation error</p>
-    </div>
-    <div>
-        <label th:text="Resource">Resource Campeon</label>
-        <input type="text"  th:field="*{resource}"/>
-        <p th:each="error : ${#fields.errors('resource')}"
-           th:text="${error}">Validation error</p>
-    </div>
-    <div>
-        <label th:text="AttackRange">Attack Range Campeon</label>
-        <input type="text"  th:field="*{attackRange}"/>
-        <p th:each="error : ${#fields.errors('attackRange')}"
-           th:text="${error}">Validation error</p>
-    </div>
+        <div>
+            <label th:text="Name">Nom Campeon</label>
+            <input type="text" id="username" th:field="*{name}"/>
+            <p th:each="error: ${#fields.errors('name')}"
+               th:text="${error}">Validation error</p>
+        </div>
+        <div>
+            <label th:text="Role">Rol Campeon</label>
+            <input type="text"  th:field="*{role}"/>
+            <p th:each="error : ${#fields.errors('role')}"
+               th:text="${error}">Validation error</p>
+        </div>
+        <div>
+            <label th:text="AttackType">Ataque Campeon</label>
+            <input type="text"  th:field="*{attack}"/>
+            <p th:each="error : ${#fields.errors('attack')}"
+               th:text="${error}">Validation error</p>
+        </div>
+        <div>
+            <label th:text="Resource">Resource Campeon</label>
+            <input type="text"  th:field="*{resource}"/>
+            <p th:each="error : ${#fields.errors('resource')}"
+               th:text="${error}">Validation error</p>
+        </div>
+        <div>
+            <label th:text="AttackRange">Attack Range Campeon</label>
+            <input type="text"  th:field="*{attackRange}"/>
+            <p th:each="error : ${#fields.errors('attackRange')}"
+               th:text="${error}">Validation error</p>
+        </div>
     </font>
     <button type="submit" style="font-face: 'Comic Sans MS'; font-size: larger; color: teal; background-color: #FFFFC0; border: 3pt ridge lightgrey"  th:text="Submit">submit</button>
 </form>
