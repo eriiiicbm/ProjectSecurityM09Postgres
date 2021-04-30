@@ -30,9 +30,9 @@ public class ControladorCampeones {
     }
 
     @RequestMapping( value ="/delete/{name}", method = RequestMethod.POST)
-    public String removeCampeon(@PathVariable("name") String campeon){
+    public String removeCampeon(@PathVariable("name") String animal){
 
-        serveiCampeon.deleteByName(campeon);
+        serveiCampeon.deleteByName(animal);
         return "redirect:/";
     }
 
